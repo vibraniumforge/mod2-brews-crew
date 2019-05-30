@@ -1,0 +1,5 @@
+<h1>View a Purchase</h1>
+
+<h3>Customer Name: <%= @purchase.customer_name %></h3>
+<h3>Price: <%= @purchase.price %></h3>
+<h3>Blend Name: <%= link_to @purchase.brew.blend_name, @purchase.brew.blend_name %></h3>

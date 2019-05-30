@@ -1,0 +1,9 @@
+<h1>View all Brews</h1>
+
+<% @brews.each do |brew|%>
+    <%= link_to brew.blend_name, brew_path(brew) %> | 
+    <%= link_to "Delete" , brew, method: "delete", data: { confirm: "Are you sure?"} %><br>
+<% end %>
+<h3><%= link_to "Strongest Brew", strongest_path %> lsof -I tcp:3000
+Look for pid
+Kill -9 3000 whatever

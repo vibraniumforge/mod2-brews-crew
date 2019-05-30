@@ -1,0 +1,23 @@
+<h1>View all Purchases</h1>
+<table>
+    <thead>
+        <tr>
+            <td>Customer Name </tbody>
+            <td>Price </td>
+            <td>Brew </td>
+        </tr>
+    </thead>
+    <tbody>
+        <%  @purchases.each do |purchase| %>
+         <tr>
+            <td><%= purchase.customer_name %> </td>
+            <td><%= purchase.price %> </td>
+            <td><%= purchase.brew.blend_name %> </td>
+            <td><%= link_to "View", purchase_path(purchase) %> </td>
+            <td><%= link_to "Edit", edit_purchase_path(purchase) %> </td>
+            <td><%= link_to "Delete", purchase, method: :delete, data: {confirm: 'Really delete?' } %></td>
+        <% end %>
+        </tr>
+    </tbody>
+</table>
+
